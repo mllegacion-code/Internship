@@ -181,24 +181,15 @@ document.addEventListener("click", (e) => {
 
 });
 
-const flipCards = document.querySelectorAll(".flip-card");
+/* flip */
+document.addEventListener("DOMContentLoaded", () => {
+  // Target all flip cards
+  const flipCards = document.querySelectorAll(".flip-card");
 
-flipCards.forEach(card => {
-
+  // Add click toggle event listener to each card
+  flipCards.forEach((card) => {
     card.addEventListener("click", () => {
-
-        flipCards.forEach(other => {
-
-            if(other !== card){
-
-                other.classList.remove("flipped");
-
-            }
-
-        });
-
-        card.classList.toggle("flipped");
-
+      card.classList.toggle("flipped");
     });
-
+  });
 });
